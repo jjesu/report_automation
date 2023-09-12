@@ -1,6 +1,4 @@
 # Sharepoint 
-
-ChatGPT
 The Sharepoint class is a Python class designed to facilitate the upload and download of files to and from a SharePoint document library. SharePoint is a popular platform for document management and collaboration within organizations.
 
 Here's an overview of what this class does:
