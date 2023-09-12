@@ -1,3 +1,35 @@
+# Sharepoint 
+
+ChatGPT
+The Sharepoint class is a Python class designed to facilitate the upload and download of files to and from a SharePoint document library. SharePoint is a popular platform for document management and collaboration within organizations.
+
+Here's an overview of what this class does:
+
+Initialization:
+
+The class is initialized with several parameters related to SharePoint configuration, including client_id, client_secret, tenant_id, tenant, and site_name. These parameters are used for authentication and determining the SharePoint site's URL.
+Access Token Retrieval:
+
+The _get_access_token method is responsible for obtaining an access token for SharePoint. This token is required for making authenticated requests to SharePoint's APIs.
+Download from SharePoint:
+
+The get_sharepoint_xlsx_file_bytes method allows you to download a file from SharePoint as a bytes object. It takes a file_path parameter, which specifies the path to the file in SharePoint.
+
+The get_sharepoint_xlsx_file_download method is similar to the previous one but downloads the file to a local temporary file and returns the file path. This is useful when you need to work with the downloaded file on the local system.
+
+Upload to SharePoint:
+
+The post_sharepoint_xlsx_file_bytes method allows you to upload a file to SharePoint from bytes. It takes parameters such as upload_file_path (the URL path where the file will be uploaded in SharePoint), doc_lib_name (the SharePoint document library name), subfolder_name (the name of a subfolder within the document library), and upload_content (the file content as bytes).
+
+The post_sharepoint_xlsx_file_from_path method is similar to the previous one but allows you to upload a file from a local path. It reads the file content from the local file and then calls the post_sharepoint_xlsx_file_bytes method for the upload.
+
+HTTP Requests:
+
+The class utilizes the Python requests library to make HTTP requests to SharePoint's REST API endpoints. It handles authentication by including the access token in the request headers.
+Logging:
+
+The class uses a logger to record information about its operations, making it easier to track and diagnose any issues that may occur during file upload or download.
+
 # PDFGenerator
 
 This Python class, PDFGenerator, is designed to create a PDF document from a given Pandas DataFrame and other specified elements like headers, footers, and styling options. Here's an overview of what this class does:
